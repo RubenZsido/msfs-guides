@@ -28,40 +28,53 @@ The SimVarPublisher base class handles:
 ## Step-by-Step Implementation
 
 1. Declare bus
+
     ```ts
     protected readonly bus = new EventBus();
     ```
 
 2. Declare publisher
+
     ```ts
     protected readonly tacanPublisher = new TacanSimVarPublisher(this.bus);
     ```
 
-3. Initialize publisher [details in Implementation Options section]
+3. Initialize publisher
 
-## Implementation Options
+    Using Backplane (Recommended)
 
-### Using Backplane (Recommended)
-```ts
-protected readonly backplane = new InstrumentBackplane();
-// In your component constructor
-this.backplane.addPublisher(this.tacanPublisher);
-this.backplane.init();
+    ```ts
+    protected readonly backplane = new InstrumentBackplane();
+    // In your component constructor
+    this.backplane.addPublisher(this.tacanPublisher);
+    this.backplane.init();
 
-//Update
-this.backplane.onUpdate()
-```
+    //Update
+    this.backplane.onUpdate()
+    ```
 
-### Manual Initialization
-```ts
-// In Connected callback
-this.tacanPublisher.startPublishing();
+    Manual Initialization
 
-// In Update
-this.tacanPublisher.onUpdate();
+    ```ts
+    // In Connected callback
+    this.tacanPublisher.startPublishing();
 
-this.tacanPublisher.stopPublishing();
-```
+    // In Update
+    this.tacanPublisher.onUpdate();
+
+    this.tacanPublisher.stopPublishing();
+    ```
+
+4. Getting the simvars from the bus
+
+    ```ts
+    this.bus.getSubscriber<TacanSimVarEvents>().on('tacan_active_channel_1').handle((value) => {
+      console.log('tacan_active_channel_1', value);
+      this.tacanValues.activeChannel1 = value;
+    });
+    ```
+
+    Or you can get them from NavIndicators that automatically handle NavSource switching. See `NavIndicators.md` and `NavSources.md` for more details.
 
 ## Best Practices
 
@@ -80,6 +93,7 @@ this.tacanPublisher.stopPublishing();
 ## Code Examples
 
 ### TypeScript Implementation
+
 ```ts
 import { EventBus, SimVarDefinition, SimVarPublisher, SimVarValueType } from '@microsoft/msfs-sdk';
 
