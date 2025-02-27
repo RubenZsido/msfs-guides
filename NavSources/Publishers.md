@@ -1,0 +1,151 @@
+# Publishers
+
+Publishers are components that publish SimVar values to the EventBus. They allow other components to subscribe to SimVar changes rather than polling values directly.
+
+Key benefits:
+
+- Reduced CPU usage by centralizing SimVar polling
+- Cleaner code through event-driven architecture
+- Easier testing and debugging
+
+Publishers typically:
+
+1. Define an interface for the events they publish
+2. Map SimVars to their corresponding event names
+3. Extend SimVarPublisher with the event interface
+4. Initialize with an EventBus instance
+
+The SimVarPublisher base class handles:
+
+- Polling SimVars at regular intervals
+- Publishing changes to the EventBus
+- Managing subscriptions
+
+## Using publsihers step by step
+
+1. Declare bus
+```js
+protected readonly bus = new EventBus();
+```
+2. Declare publisher
+
+```js
+protected readonly tacanPublisher = new TacanSimVarPublisher(this.bus);
+```
+3. Initialize publisher
+
+There are two ways to initialize a publisher:
+
+a. Using a Backplane (recommended):
+```ts
+protected readonly backplane = new InstrumentBackplane();
+// In your component constructor
+this.backplane.addPublisher(this.tacanPublisher);
+this.backplane.init();
+
+//Update
+this.backplane.onUpdate()
+```
+
+> **Why use Backplane?**
+> - Centralizes management of multiple publishers
+> - Handles lifecycle (start/stop) automatically
+> - Reduces boilerplate code
+> - Easier to maintain when scaling up instruments
+> - Single update call handles all publishers
+
+b. Manual initialization:
+```ts
+// In Connected callback
+this.tacanPublisher.startPublishing();
+
+// In Update
+this.tacanPublisher.onUpdate();
+
+this.tacanPublisher.stopPublishing();
+```
+
+> **Note:** Use manual initialization only as a fallback if Backplane integration isn't working or for debugging specific publisher issues.
+
+## Example custom publisher
+
+```ts
+import { EventBus, SimVarDefinition, SimVarPublisher, SimVarPublisherEntry, SimVarValueType } from '@microsoft/msfs-sdk';
+
+/**
+ * Events published by the TACAN system on the bus.
+ */
+export interface TacanSimVarEvents {
+  /** TACAN active channel for each index */
+  tacan_active_channel_1: number;
+  tacan_active_channel_2: number;
+  // /** TACAN active mode (X/Y) for each index */
+  tacan_active_mode_1: boolean;
+  tacan_active_mode_2: boolean;
+}
+
+export enum TacanSimVars {
+  TacanActiveChannel1 = 'TACAN ACTIVE CHANNEL:1',
+  TacanActiveChannel2 = 'TACAN ACTIVE CHANNEL:2',
+  TacanActiveMode1 = 'TACAN ACTIVE MODE:1',
+  TacanActiveMode2 = 'TACAN ACTIVE MODE:2',
+}
+
+/** A publisher to poll and publish TACAN simvars. */
+export class TacanSimVarPublisher extends SimVarPublisher<TacanSimVarEvents> {
+  private static simvars = new Map<keyof TacanSimVarEvents, SimVarDefinition>([
+    // i - All TACAN SimVars require an index (1 or 2)
+    ['tacan_active_channel_1', { name: TacanSimVars.TacanActiveChannel1, type: SimVarValueType.Number}],
+    ['tacan_active_channel_2', { name: TacanSimVars.TacanActiveChannel2, type: SimVarValueType.Number}],
+    ['tacan_active_mode_1', { name: TacanSimVars.TacanActiveMode1, type: SimVarValueType.Bool}],
+    ['tacan_active_mode_2', { name: TacanSimVars.TacanActiveMode2, type: SimVarValueType.Bool}]
+  ]);
+
+  /**
+   * Create a TacanSimVarPublisher
+   * @param bus The EventBus to publish to
+   */
+  public constructor(bus: EventBus) {
+    super(TacanSimVarPublisher.simvars, bus);
+  }
+}
+```
+### JavaScript version
+
+```js
+//import necessary files in html, usually msfssdk.js
+/**
+ * Events published by the TACAN system on the bus.
+ */
+const TacanSimVarEvents = {
+  tacan_active_channel_1: 'number',
+  tacan_active_channel_2: 'number',
+  tacan_active_mode_1: 'boolean',
+  tacan_active_mode_2: 'boolean'
+};
+
+const TacanSimVars = {
+  TacanActiveChannel1: 'TACAN ACTIVE CHANNEL:1',
+  TacanActiveChannel2: 'TACAN ACTIVE CHANNEL:2',
+  TacanActiveMode1: 'TACAN ACTIVE MODE:1',
+  TacanActiveMode2: 'TACAN ACTIVE MODE:2'
+};
+
+/** A publisher to poll and publish TACAN simvars. */
+class TacanSimVarPublisher extends SimVarPublisher {
+  static simvars = new Map([
+    ['tacan_active_channel_1', { name: TacanSimVars.TacanActiveChannel1, type: SimVarValueType.Number }],
+    ['tacan_active_channel_2', { name: TacanSimVars.TacanActiveChannel2, type: SimVarValueType.Number }],
+    ['tacan_active_mode_1', { name: TacanSimVars.TacanActiveMode1, type: SimVarValueType.Bool }],
+    ['tacan_active_mode_2', { name: TacanSimVars.TacanActiveMode2, type: SimVarValueType.Bool }]
+  ]);
+
+  /**
+   * Create a TacanSimVarPublisher
+   * @param {EventBus} bus The EventBus to publish to
+   */
+  constructor(bus) {
+    super(TacanSimVarPublisher.simvars, bus);
+  }
+}
+```
