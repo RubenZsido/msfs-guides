@@ -8,4 +8,7 @@
 !*.md
 
 # Don't ignore .gitignore
-!.gitignore 
+!.gitignore
+
+# Don't ignore Python files
+!*.py 
