@@ -1,0 +1,22 @@
+---
+category: SimVars Documentation
+topic: Structs And Other Complex Units
+description: The following units are used when the value is a struct or something other than a single value float or integer. In general these units are only used when retrieving the output from a specific SimVar ...
+keywords: [Simulation Variable, Description, Units, Settable]
+usage_context: Aircraft systems, simulation variables, flight modeling
+---
+
+# Structs And Other Complex Units
+
+The following units are used when the value is a struct or something other than a single value float or integer. In general these units are only used when retrieving the output from a specific SimVar and would never be used to define any inputs.
+
+| Units | Description |
+| --- | --- |
+| XYZ | This unit signifies a 3 value struct with the values (all 32bit floats): x - a value representing an X position y - a value representing an Y position z - a value representing an Z position This struct unit is required by the following SimVars: STRUCT_BODY_ROTATION_ACCELERATION STRUCT_BODY_ROTATION_VELOCITY STRUCT_BODY_VELOCITY STRUCT_ENGINE_POSITION STRUCT_EYEPOINT_DYNAMIC_ANGLE STRUCT_EYEPOINT_DYNAMIC_OFFSET STRUCT_SURFACE_RELATIVE_VELOCITY STRUCT_WORLDVELOCITY STRUCT_WORLD_ACCELERATION STRUCT_WORLD_ROTATION_VELOCITY |
+| PBH | This unit signifies a 3 value struct with the values (all 32bit integers): pitch - the pitch value bank - the bank value heading - the heading value This struct unit is required by the following SimVars: LANDING_LIGHT_PBH STRUCT_PBH32 |
+| latlonaltpbh | This unit signifies a 6 value struct with the values: lat - a latitude, expressed as a 64bit integer where the first 16bits are padding, the next 32bits are the integer value and the last 16bits are the fraction. lon - a longitude, expressed as 64bit integer where the lower 16bits are the fractional part, the upper 32 bits are the integer part and the rest is padding. alt - an altitude, expressed as a 64bit integer where the first 16bits are padding, the next 32bits are the integer value and the last 16bits are the fraction. pitch - the pitch value, expressed as 32bit integer bank - the bank value, expressed as 32bit integer heading - the heading value, expressed as 32bit integer This struct unit is required by the following SimVars: STRUCT_LATLONALTPBH |
+| latlonalt | This unit signifies a 6 value struct with the values: lat - a latitude, expressed as a 64bit integer where the first 16bits are padding, the next 32bits are the integer value and the last 16bits are the fraction. lon - a longitude, expressed as 64bit integer where the lower 16bits are the fractional part, the upper 32 bits are the integer part and the rest is padding. alt - an altitude, expressed as a 64bit integer where the first 16bits are padding, the next 32bits are the integer value and the last 16bits are the fraction. This struct unit is required by the following SimVars: ADF LATLONALT INNER_MARKER_LATLONALT MIDDLE_MARKER_LATLONALT NAV_DME_LATLONALT NAV_GS_LATLONALT NAV_VOR_LATLONALT OUTER_MARKER_LATLONALT STRUCT_LATLONALT |
+| PID_STRUCT | This unit signifies a 7 value struct containing PID controller state with the values (all 64bit floats): pid_p - the proportional value pid_i - the first integral value pid_i2 - the second integral value pid_d - the proportional value i_boundary - the first integral boundary value i2_boundary - the second integral boundary value d_boundary - the derivative boundary value This struct is returned by the following SimVars: STRUC_AIRSPEED_HOLD_PID_CONSTS STRUC_HEADING_HOLD_PID_CONSTS |
+| POIList | This unit signifies that the returned value is an array of POI data. This unit is only used within the JS for HTML gauges. |
+| GlassCockpitSettings | This unit is only used when retrieving the cockpit struct within the JS for HTML gauges. For the contents of this struct, please see the section on the Glass Cockpit Settings Struct. |
+| FuelLevels | This unit is for retrieving the fuel levels of all tanks and will return a struct containing the following values (all 32bit floats): Center LeftMain RightMain LeftAux RightAux LeftTip RightTip Center2 Center3 External1 External2 |
