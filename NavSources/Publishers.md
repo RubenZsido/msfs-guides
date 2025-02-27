@@ -2,11 +2,15 @@
 
 Publishers are components that publish SimVar values to the EventBus. They allow other components to subscribe to SimVar changes rather than polling values directly.
 
+## Overview
+
 Key benefits:
 
 - Reduced CPU usage by centralizing SimVar polling
 - Cleaner code through event-driven architecture
 - Easier testing and debugging
+
+## Implementation Details
 
 Publishers typically:
 
@@ -21,22 +25,23 @@ The SimVarPublisher base class handles:
 - Publishing changes to the EventBus
 - Managing subscriptions
 
-## Using publsihers step by step
+## Step-by-Step Implementation
 
 1. Declare bus
-```js
-protected readonly bus = new EventBus();
-```
+    ```ts
+    protected readonly bus = new EventBus();
+    ```
+
 2. Declare publisher
+    ```ts
+    protected readonly tacanPublisher = new TacanSimVarPublisher(this.bus);
+    ```
 
-```js
-protected readonly tacanPublisher = new TacanSimVarPublisher(this.bus);
-```
-3. Initialize publisher
+3. Initialize publisher [details in Implementation Options section]
 
-There are two ways to initialize a publisher:
+## Implementation Options
 
-a. Using a Backplane (recommended):
+### Using Backplane (Recommended)
 ```ts
 protected readonly backplane = new InstrumentBackplane();
 // In your component constructor
@@ -47,14 +52,7 @@ this.backplane.init();
 this.backplane.onUpdate()
 ```
 
-> **Why use Backplane?**
-> - Centralizes management of multiple publishers
-> - Handles lifecycle (start/stop) automatically
-> - Reduces boilerplate code
-> - Easier to maintain when scaling up instruments
-> - Single update call handles all publishers
-
-b. Manual initialization:
+### Manual Initialization
 ```ts
 // In Connected callback
 this.tacanPublisher.startPublishing();
@@ -65,12 +63,25 @@ this.tacanPublisher.onUpdate();
 this.tacanPublisher.stopPublishing();
 ```
 
-> **Note:** Use manual initialization only as a fallback if Backplane integration isn't working or for debugging specific publisher issues.
+## Best Practices
 
-## Example custom publisher
+1. Use Backplane for publisher management
+   - Centralizes management
+   - Handles lifecycle automatically
+   - Reduces boilerplate
+   - Easier maintenance
+   - Single update call
 
+2. Organize SimVars by system
+   - Group related variables
+   - Use clear naming conventions
+   - Document variable purposes
+
+## Code Examples
+
+### TypeScript Implementation
 ```ts
-import { EventBus, SimVarDefinition, SimVarPublisher, SimVarPublisherEntry, SimVarValueType } from '@microsoft/msfs-sdk';
+import { EventBus, SimVarDefinition, SimVarPublisher, SimVarValueType } from '@microsoft/msfs-sdk';
 
 /**
  * Events published by the TACAN system on the bus.
@@ -110,6 +121,7 @@ export class TacanSimVarPublisher extends SimVarPublisher<TacanSimVarEvents> {
   }
 }
 ```
+
 ### JavaScript version
 
 ```js
@@ -149,3 +161,37 @@ class TacanSimVarPublisher extends SimVarPublisher {
   }
 }
 ```
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. **Verify SimVars with SimVar Watcher first**
+   - Use SimVar Watcher in Dev Mode to confirm:
+     - SimVar names match exactly as documented in SDK
+     - SimVar prefixes are correct (A: for aircraft, L: for local, E: for engine)
+     - Values update in real-time when aircraft state changes
+     - Units match SDK documentation (degrees, feet, knots etc.)
+
+2. **Publisher not updating**
+   - Verify onUpdate is being called
+   - Check SimVar names are correct
+   - Ensure EventBus is properly initialized
+
+## Performance Optimization
+
+1. **Polling Optimization**
+   - Group related SimVars
+   - Use appropriate update intervals
+   - Consider using different intervals for different variables
+
+2. **Memory Management**
+   - Clean up subscribers when components unmount
+   - Stop publishers when not needed
+   - Use appropriate data types
+
+## Related Resources
+
+- MSFS SDK Documentation
+- EventBus Documentation
+- SimVar Reference Guide
