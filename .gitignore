@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Don't ignore directories
+!*/
+
+# Don't ignore .md files
+!*.md
+
+# Don't ignore .gitignore
+!.gitignore 
