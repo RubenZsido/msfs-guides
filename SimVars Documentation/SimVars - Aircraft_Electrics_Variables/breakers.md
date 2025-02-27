@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Breakers
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Breakers
 
 | Simulation Variable | Description | Units | Settable |

@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Spoilers
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Spoilers
 
 | Simulation Variable | Description | Units | Settable |

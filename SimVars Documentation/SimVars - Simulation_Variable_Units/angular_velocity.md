@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Angular velocity
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Angular velocity
 
 | Units | Description |

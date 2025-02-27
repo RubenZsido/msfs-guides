@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: AIRCRAFT ELECTRICS VARIABLES
-description: The tables below indicate the properties for the Simulation Variables that can be used to get and set variables related to the electrical system of the aircraft. For information on the units listed fo...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # AIRCRAFT ELECTRICS VARIABLES
 
 The tables below indicate the properties for the Simulation Variables that can be used to get and set variables related to the electrical system of the aircraft. For information on the units listed for each variable, please see here: Simulation Variable Units

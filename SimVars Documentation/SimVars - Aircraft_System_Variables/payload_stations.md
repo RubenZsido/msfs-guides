@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Payload Stations
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Payload Stations
 
 | Simulation Variable | Description | Units | Settable |

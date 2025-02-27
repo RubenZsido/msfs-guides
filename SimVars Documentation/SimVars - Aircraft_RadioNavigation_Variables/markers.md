@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: MARKERS
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # MARKERS
 
 | Simulation Variable | Description | Units | Settable |

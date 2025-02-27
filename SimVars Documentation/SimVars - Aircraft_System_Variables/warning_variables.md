@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Warning Variables
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Warning Variables
 
 | Simulation Variable | Description | Units | Settable |

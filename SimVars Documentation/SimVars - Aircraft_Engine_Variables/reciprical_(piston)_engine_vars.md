@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Reciprical (Piston) Engine Vars
-description: The following SimVars are only valid for piston engines:
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Reciprical (Piston) Engine Vars
 
 The following SimVars are only valid for piston engines:

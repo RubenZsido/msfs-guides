@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: AIRCRAFT AUTOPILOT/ASSISTANT VARIABLES
-description: The table below indicates the properties for the Simulation Variables that can be used to get and set properties related to the autopilot of an aircraft. For information on the units listed for each v...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # AIRCRAFT AUTOPILOT/ASSISTANT VARIABLES
 
 The table below indicates the properties for the Simulation Variables that can be used to get and set properties related to the autopilot of an aircraft. For information on the units listed for each variable, please see here: Simulation Variable Units

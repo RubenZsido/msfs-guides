@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Partial Panels
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Partial Panels
 
 | Simulation Variable | Description | Units | Settable |

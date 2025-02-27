@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: HELICOPTER VARIABLES
-description: The tables below indicate the properties for the Simulation Variables that can be used to get and set properties related specifically to helicopters. For information on the units listed for each varia...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # HELICOPTER VARIABLES
 
 The tables below indicate the properties for the Simulation Variables that can be used to get and set properties related specifically to helicopters. For information on the units listed for each variable, please see here: Simulation Variable Units

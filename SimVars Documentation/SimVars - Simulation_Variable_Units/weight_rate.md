@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Weight rate
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Weight rate
 
 | Units | Description |

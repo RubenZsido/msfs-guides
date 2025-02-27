@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Carrier Operations
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Carrier Operations
 
 | Simulation Variable | Description | Units | Settable |

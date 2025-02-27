@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Lights
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Lights
 
 | Simulation Variable | Description | Units | Settable |

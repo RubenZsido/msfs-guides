@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Misc.
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Misc.
 
 | Simulation Variable | Description | Units | Settable |

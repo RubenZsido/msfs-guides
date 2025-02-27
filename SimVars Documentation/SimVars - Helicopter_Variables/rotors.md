@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Rotors
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Rotors
 
 | Simulation Variable | Description | Units | Settable |

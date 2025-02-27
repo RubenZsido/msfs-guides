@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Elevator
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Elevator
 
 | Simulation Variable | Description | Units | Settable |

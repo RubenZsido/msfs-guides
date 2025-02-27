@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Contact Points
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Contact Points
 
 | Simulation Variable | Description | Units | Settable |

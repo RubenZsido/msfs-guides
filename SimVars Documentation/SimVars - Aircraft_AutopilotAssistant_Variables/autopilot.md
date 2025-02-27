@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Autopilot
-description: IMPORTANT! The SimVars listed here are not applicable - and will not work correctly (if at all) - when used with a helicopter.
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Autopilot
 
 IMPORTANT! The SimVars listed here are not applicable - and will not work correctly (if at all) - when used with a helicopter.

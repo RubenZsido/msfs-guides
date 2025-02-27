@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Folding Wings
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Folding Wings
 
 | Simulation Variable | Description | Units | Settable |

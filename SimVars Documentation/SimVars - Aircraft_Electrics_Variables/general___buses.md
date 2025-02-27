@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: General / Buses
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # General / Buses
 
 | Simulation Variable | Description | Units | Settable |

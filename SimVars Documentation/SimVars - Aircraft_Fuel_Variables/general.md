@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: General
-description: The majority of these SimVars are only valid for legacy aircraft that have set up their fuel using the [FUEL] section of the flight model CFG file. Aircraft in Microsoft Flight Simulator should not be...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # General
 
 The majority of these SimVars are only valid for legacy aircraft that have set up their fuel using the [FUEL] section of the flight model CFG file. Aircraft in Microsoft Flight Simulator should not be using this fuel method nor these SimVars, and should instead be defining things using the [FUEL_SYSTEM] section of the CFG file and the Fuel System SimVars.

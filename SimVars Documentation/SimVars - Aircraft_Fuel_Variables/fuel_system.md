@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Fuel System
-description: These SimVars are dedicated to controlling the modern component fuel system, which you can set up in the [FUEL_SYSTEM] section of the flight_model.cfg. All aircraft made for Microsoft Flight Simulator...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Fuel System
 
 These SimVars are dedicated to controlling the modern component fuel system, which you can set up in the [FUEL_SYSTEM] section of the flight_model.cfg. All aircraft made for Microsoft Flight Simulator should be using this system and these SimVars, and only legacy aircraft should be using the General SimVars and the [FUEL] section of the flight_model.cfg file.

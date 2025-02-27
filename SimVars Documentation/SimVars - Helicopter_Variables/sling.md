@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Sling
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Sling
 
 | Simulation Variable | Description | Units | Settable |

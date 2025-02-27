@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: External Power
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # External Power
 
 | Simulation Variable | Description | Units | Settable |

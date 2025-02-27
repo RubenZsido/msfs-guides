@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Ailerons
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Ailerons
 
 | Simulation Variable | Description | Units | Settable |

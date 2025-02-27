@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Ornithopter
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Ornithopter
 
 | Simulation Variable | Description | Units | Settable |

@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Flight Assistant
-description: The flight assistant panel is a panel that the user can open in the Microsoft Flight Simulator UI. this panel lets the user set a destination in-sim among nearest Airports, POI, Cities, etc... as well...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Flight Assistant
 
 The flight assistant panel is a panel that the user can open in the Microsoft Flight Simulator UI. this panel lets the user set a destination in-sim among nearest Airports, POI, Cities, etc... as well as give information on some design speeds of the aircraft or turn on / off some assistances.

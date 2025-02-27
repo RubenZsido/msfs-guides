@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Aircraft Assistance
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Aircraft Assistance
 
 | Simulation Variable | Description | Units | Settable |

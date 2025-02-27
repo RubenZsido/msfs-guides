@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Rudder
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Rudder
 
 | Simulation Variable | Description | Units | Settable |

@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: AIRCRAFT CONTROL VARIABLES
-description: The tables below indicate the properties for the Simulation Variables that can be used to get and set properties related to the various aircraft control systems. For information on the units listed fo...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # AIRCRAFT CONTROL VARIABLES
 
 The tables below indicate the properties for the Simulation Variables that can be used to get and set properties related to the various aircraft control systems. For information on the units listed for each variable, please see here: Simulation Variable Units

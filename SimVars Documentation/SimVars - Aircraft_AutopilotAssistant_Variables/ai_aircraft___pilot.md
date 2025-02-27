@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: AI Aircraft / Pilot
-description: The following SimVars are used to get information about the AI pilot:
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # AI Aircraft / Pilot
 
 The following SimVars are used to get information about the AI pilot:

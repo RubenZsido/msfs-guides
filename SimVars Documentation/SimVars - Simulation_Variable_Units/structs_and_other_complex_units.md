@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Structs And Other Complex Units
-description: The following units are used when the value is a struct or something other than a single value float or integer. In general these units are only used when retrieving the output from a specific SimVar ...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Structs And Other Complex Units
 
 The following units are used when the value is a struct or something other than a single value float or integer. In general these units are only used when retrieving the output from a specific SimVar and would never be used to define any inputs.

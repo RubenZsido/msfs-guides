@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: AIRCRAFT MISC VARIABLES
-description: The tables below indicate the properties for the Simulation Variables that can be used to get and set properties various miscellaneous properties related to the aircraft. For information on the units ...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # AIRCRAFT MISC VARIABLES
 
 The tables below indicate the properties for the Simulation Variables that can be used to get and set properties various miscellaneous properties related to the aircraft. For information on the units listed for each variable, please see here: Simulation Variable Units

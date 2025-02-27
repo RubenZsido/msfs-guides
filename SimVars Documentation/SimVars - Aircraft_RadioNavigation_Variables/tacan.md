@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: TACAN
-description: The table below lists all the SimVars related to the Tacan system on an aircraft. You can have either 1 or 2 of these systems, and in so all these SimVars require an index value of 1 or 2, depending o...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # TACAN
 
 The table below lists all the SimVars related to the Tacan system on an aircraft. You can have either 1 or 2 of these systems, and in so all these SimVars require an index value of 1 or 2, depending on which one you want to target. Note that you must have first enabled the Tacan using the Tacan.N parameter in the systems.cfg file.

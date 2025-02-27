@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: ADF
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # ADF
 
 | Simulation Variable | Description | Units | Settable |

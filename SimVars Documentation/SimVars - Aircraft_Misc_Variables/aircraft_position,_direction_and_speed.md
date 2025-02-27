@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Aircraft Position, Direction And Speed
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Aircraft Position, Direction And Speed
 
 | Simulation Variable | Description | Units | Settable |

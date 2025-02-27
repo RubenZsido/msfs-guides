@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: SIMULATION VARIABLE UNITS
-description: This page lists the different units of measurement that can be used when accessing or setting the different simulation variables.
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # SIMULATION VARIABLE UNITS
 
 This page lists the different units of measurement that can be used when accessing or setting the different simulation variables.

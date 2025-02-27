@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Angular acceleration
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Angular acceleration
 
 | Units | Description |

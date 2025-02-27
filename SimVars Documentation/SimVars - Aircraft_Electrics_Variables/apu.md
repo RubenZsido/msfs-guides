@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: APU
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # APU
 
 | Simulation Variable | Description | Units | Settable |

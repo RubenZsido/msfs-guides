@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Landing Gear
-description: These SimVars are related to the landing gear of the aircraft. Note that some of them require an index to identify the landing gear. This index value should be one of the following:
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Landing Gear
 
 These SimVars are related to the landing gear of the aircraft. Note that some of them require an index to identify the landing gear. This index value should be one of the following:

@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Alternators
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Alternators
 
 | Simulation Variable | Description | Units | Settable |

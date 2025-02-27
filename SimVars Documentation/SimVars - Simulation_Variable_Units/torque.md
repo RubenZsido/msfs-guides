@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Torque
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Torque
 
 | Units | Description |

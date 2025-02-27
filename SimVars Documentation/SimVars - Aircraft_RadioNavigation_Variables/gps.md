@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: GPS
-description: When using these SimVars, it is worth noting that to correctly set those that can be set, you should first use the SimVar GPS OVERRIDEN and set it to TRUE. If you don't set this SimVar, then any chang...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # GPS
 
 When using these SimVars, it is worth noting that to correctly set those that can be set, you should first use the SimVar GPS OVERRIDEN and set it to TRUE. If you don't set this SimVar, then any changes that are made to the other GPS variables will be overriden by the simulation GPS system moments after you set them.

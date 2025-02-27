@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: AIRCRAFT ENGINE VARIABLES
-description: The table below indicates the properties for the Simulation Variables that can be used to get and set properties related to the engines of an aircraft. For information on the units listed for each var...
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # AIRCRAFT ENGINE VARIABLES
 
 The table below indicates the properties for the Simulation Variables that can be used to get and set properties related to the engines of an aircraft. For information on the units listed for each variable, please see here: Simulation Variable Units

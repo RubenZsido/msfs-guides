@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Center Of Gravity
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Center Of Gravity
 
 | Simulation Variable | Description | Units | Settable |

@@ -126,17 +126,6 @@ def create_section_markdown(section: Section) -> str:
     """Convert a section to markdown format"""
     lines = []
     
-    # Add metadata
-    lines.extend([
-        "---",
-        "category: SimVars Documentation",
-        f"topic: {section.title}",
-        f"description: {section.description[:200] + '...' if len(section.description) > 200 else section.description}",
-        "keywords: [Simulation Variable, Description, Units, Settable]",
-        "usage_context: Aircraft systems, simulation variables, flight modeling",
-        "---\n"
-    ])
-    
     # Add title and description
     lines.append(f"# {section.title}\n")
     if section.description:
@@ -150,17 +139,6 @@ def create_section_markdown(section: Section) -> str:
 def create_index_markdown(doc: Document) -> str:
     """Create index file for the document"""
     lines = []
-    
-    # Add metadata
-    lines.extend([
-        "---",
-        "category: SimVars Documentation",
-        f"topic: {doc.title}",
-        f"description: {doc.description[:200] + '...' if len(doc.description) > 200 else doc.description}",
-        "keywords: [Simulation Variable, Description, Units, Settable]",
-        "usage_context: Aircraft systems, simulation variables, flight modeling",
-        "---\n"
-    ])
     
     # Add title and description
     lines.append(f"# {doc.title}\n")

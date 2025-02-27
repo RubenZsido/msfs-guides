@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Concorde
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Concorde
 
 | Simulation Variable | Description | Units | Settable |

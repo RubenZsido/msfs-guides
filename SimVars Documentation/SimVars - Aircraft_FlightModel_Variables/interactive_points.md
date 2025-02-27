@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Interactive Points
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Interactive Points
 
 | Simulation Variable | Description | Units | Settable |

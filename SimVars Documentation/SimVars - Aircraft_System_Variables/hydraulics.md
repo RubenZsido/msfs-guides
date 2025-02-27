@@ -1,11 +1,3 @@
----
-category: SimVars Documentation
-topic: Hydraulics
-description: 
-keywords: [Simulation Variable, Description, Units, Settable]
-usage_context: Aircraft systems, simulation variables, flight modeling
----
-
 # Hydraulics
 
 | Simulation Variable | Description | Units | Settable |
