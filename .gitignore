@@ -11,4 +11,7 @@
 !.gitignore
 
 # Don't ignore Python files
-!*.py 
+!*.py
+
+# Don't ignore reference files
+!Reference files/* 
